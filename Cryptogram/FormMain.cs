@@ -10,13 +10,21 @@ using System.Windows.Forms;
 
 namespace Cryptogram
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         private IEncryptor encryptor = new Encryptor();
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
+
+            if (!panelMain.Controls.Contains(UcCvv.Instance))
+            {
+                panelMain.Controls.Add(UcCvv.Instance);
+                UcCvv.Instance.Dock = DockStyle.Fill;
+            }
+
+            UcCvv.Instance.BringToFront();
         }
 
         /*private void tbClearPVK_TextChanged(object sender, EventArgs e)
@@ -37,15 +45,15 @@ namespace Cryptogram
             tbPVV.Text = encryptor.CalPVV(pan, pin, pvki, clearPVK);
         }*/
 
-        private void btnPVV_Click(object sender, EventArgs e)
+        private void btnCvv_Click(object sender, EventArgs e)
         {
-            if(!panelMain.Controls.Contains(UcPVV.Instance))
+            if(!panelMain.Controls.Contains(UcCvv.Instance))
             {
-                panelMain.Controls.Add(UcPVV.Instance);
-                UcPVV.Instance.Dock = DockStyle.Fill;
+                panelMain.Controls.Add(UcCvv.Instance);
+                UcCvv.Instance.Dock = DockStyle.Fill;
             }
 
-            UcPVV.Instance.BringToFront();
+            UcCvv.Instance.BringToFront();
         }
     }
 }

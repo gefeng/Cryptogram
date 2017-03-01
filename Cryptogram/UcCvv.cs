@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace Cryptogram
 {
-    public partial class UcPVV : UserControl
+    public partial class UcCvv : UserControl
     {
-        private static UcPVV _instance = new UcPVV();
+        private static UcCvv _instance = new UcCvv();
 
-        private UcPVV()
+        private UcCvv()
         {
             InitializeComponent();
         }
 
-        public static UcPVV Instance
+        public static UcCvv Instance
         {
-            get { return _instance; }
+            get
+            {
+                return _instance;
+            }
         }
     }
 }
