@@ -12,19 +12,29 @@ namespace Cryptogram
 {
     public partial class FormMain : Form
     {
+        private InteractiveButton _tabCvv;
+        private InteractiveButton _tabPvv;
+        private InteractiveButton _tabPinBlock;
+        private InteractiveButton _tabTripleDes;
+        private InteractiveButton _tabXor;
+
+        private InteractiveButton[] _tabList;
+
         private IEncryptor encryptor = new Encryptor();
 
         public FormMain()
         {
             InitializeComponent();
 
-            if (!panelMain.Controls.Contains(UcCvv.Instance))
-            {
-                panelMain.Controls.Add(UcCvv.Instance);
-                UcCvv.Instance.Dock = DockStyle.Fill;
-            }
+            _tabCvv = new TabButton(new BasicButton(btnCvv));
+            _tabPvv = new TabButton(new BasicButton(btnPvv));
+            _tabPinBlock = new TabButton(new BasicButton(btnPinBlock));
+            _tabTripleDes = new TabButton(new BasicButton(btnTripleDes));
+            _tabXor = new TabButton(new BasicButton(btnXor));
 
-            UcCvv.Instance.BringToFront();
+            _tabList = new InteractiveButton[] { _tabCvv, _tabPvv, _tabPinBlock, _tabTripleDes, _tabXor };
+
+            ShowTab(_tabCvv, UcCvv.Instance);
         }
 
         /*private void tbClearPVK_TextChanged(object sender, EventArgs e)
@@ -45,15 +55,57 @@ namespace Cryptogram
             tbPVV.Text = encryptor.CalPVV(pan, pin, pvki, clearPVK);
         }*/
 
-        private void btnCvv_Click(object sender, EventArgs e)
+        private void ShowTab(InteractiveButton tab, UserControl tabContainer)
         {
-            if(!panelMain.Controls.Contains(UcCvv.Instance))
+            Array.ForEach(_tabList, t => t.TurnOff());
+
+            tab.TurnOn();
+
+            if (!panelMain.Controls.Contains(tabContainer))
             {
-                panelMain.Controls.Add(UcCvv.Instance);
-                UcCvv.Instance.Dock = DockStyle.Fill;
+                panelMain.Controls.Add(tabContainer);
+                tabContainer.Dock = DockStyle.Fill;
             }
 
-            UcCvv.Instance.BringToFront();
+            tabContainer.BringToFront();
         }
+
+        //-------------------------------------------------------------------------------------------------------
+        #region Evenet Handlers
+        //-------------------------------------------------------------------------------------------------------
+
+        private void btnCvv_Click(object sender, EventArgs e)
+        {
+            ShowTab(_tabCvv, UcCvv.Instance);
+        }
+
+        private void btnPvv_Click(object sender, EventArgs e)
+        {
+            ShowTab(_tabPvv, UcPvv.Instance);
+        }
+
+        private void btnCvv_MouseOver(object sender, EventArgs e)
+        {
+            (_tabCvv as TabButton).MouseOverHint();
+        }
+
+        private void btnCvv_MouseLeave(object sender, EventArgs e)
+        {
+            (_tabCvv as TabButton).MouseLeaveHint();
+        }
+
+        private void btnPvv_MouseOver(object sender, EventArgs e)
+        {
+            (_tabPvv as TabButton).MouseOverHint();
+        }
+
+        private void btnPvv_MouseLeave(object sender, EventArgs e)
+        {
+            (_tabPvv as TabButton).MouseLeaveHint();
+        }
+
+        //-------------------------------------------------------------------------------------------------------
+        #endregion
+        //-------------------------------------------------------------------------------------------------------
     }
 }

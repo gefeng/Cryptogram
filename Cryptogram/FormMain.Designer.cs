@@ -30,12 +30,12 @@
         {
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.panelSideBar = new System.Windows.Forms.Panel();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.btnCvv = new System.Windows.Forms.Button();
-            this.btnPvv = new System.Windows.Forms.Button();
-            this.btnPinBlock = new System.Windows.Forms.Button();
-            this.btnTripleDes = new System.Windows.Forms.Button();
             this.btnXor = new System.Windows.Forms.Button();
+            this.btnTripleDes = new System.Windows.Forms.Button();
+            this.btnPinBlock = new System.Windows.Forms.Button();
+            this.btnPvv = new System.Windows.Forms.Button();
+            this.btnCvv = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelSideBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,64 +62,21 @@
             this.panelSideBar.Size = new System.Drawing.Size(150, 430);
             this.panelSideBar.TabIndex = 1;
             // 
-            // panelMain
+            // btnXor
             // 
-            this.panelMain.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.ForeColor = System.Drawing.Color.White;
-            this.panelMain.Location = new System.Drawing.Point(150, 50);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(610, 430);
-            this.panelMain.TabIndex = 2;
-            // 
-            // btnCvv
-            // 
-            this.btnCvv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCvv.FlatAppearance.BorderSize = 0;
-            this.btnCvv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnCvv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnCvv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCvv.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCvv.ForeColor = System.Drawing.Color.White;
-            this.btnCvv.Location = new System.Drawing.Point(0, 0);
-            this.btnCvv.Name = "btnCvv";
-            this.btnCvv.Size = new System.Drawing.Size(150, 50);
-            this.btnCvv.TabIndex = 0;
-            this.btnCvv.Text = "CVV";
-            this.btnCvv.UseVisualStyleBackColor = true;
-            this.btnCvv.Click += new System.EventHandler(this.btnCvv_Click);
-            // 
-            // btnPvv
-            // 
-            this.btnPvv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPvv.FlatAppearance.BorderSize = 0;
-            this.btnPvv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnPvv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnPvv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPvv.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPvv.ForeColor = System.Drawing.Color.White;
-            this.btnPvv.Location = new System.Drawing.Point(0, 50);
-            this.btnPvv.Name = "btnPvv";
-            this.btnPvv.Size = new System.Drawing.Size(150, 50);
-            this.btnPvv.TabIndex = 1;
-            this.btnPvv.Text = "PVV";
-            this.btnPvv.UseVisualStyleBackColor = true;
-            // 
-            // btnPinBlock
-            // 
-            this.btnPinBlock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPinBlock.FlatAppearance.BorderSize = 0;
-            this.btnPinBlock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnPinBlock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnPinBlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPinBlock.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPinBlock.ForeColor = System.Drawing.Color.White;
-            this.btnPinBlock.Location = new System.Drawing.Point(0, 100);
-            this.btnPinBlock.Name = "btnPinBlock";
-            this.btnPinBlock.Size = new System.Drawing.Size(150, 50);
-            this.btnPinBlock.TabIndex = 2;
-            this.btnPinBlock.Text = "PINBlock";
-            this.btnPinBlock.UseVisualStyleBackColor = true;
+            this.btnXor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXor.FlatAppearance.BorderSize = 0;
+            this.btnXor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnXor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnXor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXor.ForeColor = System.Drawing.Color.White;
+            this.btnXor.Location = new System.Drawing.Point(0, 200);
+            this.btnXor.Name = "btnXor";
+            this.btnXor.Size = new System.Drawing.Size(150, 50);
+            this.btnXor.TabIndex = 4;
+            this.btnXor.Text = "XOR";
+            this.btnXor.UseVisualStyleBackColor = true;
             // 
             // btnTripleDes
             // 
@@ -137,21 +94,67 @@
             this.btnTripleDes.Text = "TripleDES";
             this.btnTripleDes.UseVisualStyleBackColor = true;
             // 
-            // btnXor
+            // btnPinBlock
             // 
-            this.btnXor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXor.FlatAppearance.BorderSize = 0;
-            this.btnXor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnXor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnXor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXor.ForeColor = System.Drawing.Color.White;
-            this.btnXor.Location = new System.Drawing.Point(0, 200);
-            this.btnXor.Name = "btnXor";
-            this.btnXor.Size = new System.Drawing.Size(150, 50);
-            this.btnXor.TabIndex = 4;
-            this.btnXor.Text = "XOR";
-            this.btnXor.UseVisualStyleBackColor = true;
+            this.btnPinBlock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPinBlock.FlatAppearance.BorderSize = 0;
+            this.btnPinBlock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnPinBlock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnPinBlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPinBlock.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPinBlock.ForeColor = System.Drawing.Color.White;
+            this.btnPinBlock.Location = new System.Drawing.Point(0, 100);
+            this.btnPinBlock.Name = "btnPinBlock";
+            this.btnPinBlock.Size = new System.Drawing.Size(150, 50);
+            this.btnPinBlock.TabIndex = 2;
+            this.btnPinBlock.Text = "PINBlock";
+            this.btnPinBlock.UseVisualStyleBackColor = true;
+            // 
+            // btnPvv
+            // 
+            this.btnPvv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPvv.FlatAppearance.BorderSize = 0;
+            this.btnPvv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnPvv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnPvv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPvv.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPvv.ForeColor = System.Drawing.Color.White;
+            this.btnPvv.Location = new System.Drawing.Point(0, 50);
+            this.btnPvv.Name = "btnPvv";
+            this.btnPvv.Size = new System.Drawing.Size(150, 50);
+            this.btnPvv.TabIndex = 1;
+            this.btnPvv.Text = "PVV";
+            this.btnPvv.UseVisualStyleBackColor = true;
+            this.btnPvv.Click += new System.EventHandler(this.btnPvv_Click);
+            this.btnPvv.MouseLeave += new System.EventHandler(this.btnPvv_MouseLeave);
+            this.btnPvv.MouseEnter += new System.EventHandler(this.btnPvv_MouseOver);
+            // 
+            // btnCvv
+            // 
+            this.btnCvv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCvv.FlatAppearance.BorderSize = 0;
+            this.btnCvv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCvv.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCvv.ForeColor = System.Drawing.Color.White;
+            this.btnCvv.Location = new System.Drawing.Point(0, 0);
+            this.btnCvv.Name = "btnCvv";
+            this.btnCvv.Size = new System.Drawing.Size(150, 50);
+            this.btnCvv.TabIndex = 0;
+            this.btnCvv.Text = "CVV";
+            this.btnCvv.UseVisualStyleBackColor = true;
+            this.btnCvv.Click += new System.EventHandler(this.btnCvv_Click);
+            this.btnCvv.MouseLeave += new System.EventHandler(this.btnCvv_MouseLeave);
+            this.btnCvv.MouseEnter += new System.EventHandler(this.btnCvv_MouseOver);
+            // 
+            // panelMain
+            // 
+            this.panelMain.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.ForeColor = System.Drawing.Color.White;
+            this.panelMain.Location = new System.Drawing.Point(150, 50);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(610, 430);
+            this.panelMain.TabIndex = 2;
             // 
             // FormMain
             // 
