@@ -79,11 +79,6 @@ namespace Cryptogram
             ShowTab(_tabCvv, UcCvv.Instance);
         }
 
-        private void btnPvv_Click(object sender, EventArgs e)
-        {
-            ShowTab(_tabPvv, UcPvv.Instance);
-        }
-
         private void btnCvv_MouseOver(object sender, EventArgs e)
         {
             (_tabCvv as TabButton).MouseOverHint();
@@ -92,6 +87,11 @@ namespace Cryptogram
         private void btnCvv_MouseLeave(object sender, EventArgs e)
         {
             (_tabCvv as TabButton).MouseLeaveHint();
+        }
+
+        private void btnPvv_Click(object sender, EventArgs e)
+        {
+            ShowTab(_tabPvv, UcPvv.Instance);
         }
 
         private void btnPvv_MouseOver(object sender, EventArgs e)
@@ -103,6 +103,51 @@ namespace Cryptogram
         {
             (_tabPvv as TabButton).MouseLeaveHint();
         }
+
+        private void btnPinBlock_Click(object sender, EventArgs e)
+        {
+            ShowTab(_tabPinBlock, UcPinBlock.Instance);
+        }
+
+        private void btnPinBlock_MouseOver(object sender, EventArgs e)
+        {
+            (_tabPinBlock as TabButton).MouseOverHint();
+        }
+
+        private void btnPinBlock_MouseLeave(object sender, EventArgs e)
+        {
+            (_tabPinBlock as TabButton).MouseLeaveHint();
+        }
+
+        private void btnTripleDes_Click(object sender, EventArgs e)
+        {
+            ShowTab(_tabTripleDes, UcTripleDes.Instance);
+        }
+
+        private void btnTripleDes_MouseOver(object sender, EventArgs e)
+        {
+            (_tabTripleDes as TabButton).MouseOverHint();
+        }
+
+        private void btnTripleDes_MouseLeave(object sender, EventArgs e)
+        {
+            (_tabTripleDes as TabButton).MouseLeaveHint();
+        }
+        private void btnXor_Click(object sender, EventArgs e)
+        {
+            ShowTab(_tabXor, UcXor.Instance);
+        }
+
+        private void btnXor_MouseOver(object sender, EventArgs e)
+        {
+            (_tabXor as TabButton).MouseOverHint();
+        }
+
+        private void btnXor_MouseLeave(object sender, EventArgs e)
+        {
+            (_tabXor as TabButton).MouseLeaveHint();
+        }
+
 
         //-------------------------------------------------------------------------------------------------------
         #endregion

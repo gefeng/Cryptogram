@@ -70,11 +70,29 @@
     <Compile Include="UcCvv.Designer.cs">
       <DependentUpon>UcCvv.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcPinBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcPinBlock.Designer.cs">
+      <DependentUpon>UcPinBlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="UcPvv.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UcPvv.Designer.cs">
       <DependentUpon>UcPvv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcTripleDes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcTripleDes.Designer.cs">
+      <DependentUpon>UcTripleDes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcXor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcXor.Designer.cs">
+      <DependentUpon>UcXor.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -91,8 +109,17 @@
     <EmbeddedResource Include="UcCvv.resx">
       <DependentUpon>UcCvv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcPinBlock.resx">
+      <DependentUpon>UcPinBlock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcPvv.resx">
       <DependentUpon>UcPvv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcTripleDes.resx">
+      <DependentUpon>UcTripleDes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcXor.resx">
+      <DependentUpon>UcXor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

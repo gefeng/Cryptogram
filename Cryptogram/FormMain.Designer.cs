@@ -77,6 +77,9 @@
             this.btnXor.TabIndex = 4;
             this.btnXor.Text = "XOR";
             this.btnXor.UseVisualStyleBackColor = true;
+            this.btnXor.Click += new System.EventHandler(this.btnXor_Click);
+            this.btnXor.MouseLeave += new System.EventHandler(this.btnXor_MouseLeave);
+            this.btnXor.MouseEnter += new System.EventHandler(this.btnXor_MouseOver);
             // 
             // btnTripleDes
             // 
@@ -93,6 +96,9 @@
             this.btnTripleDes.TabIndex = 3;
             this.btnTripleDes.Text = "TripleDES";
             this.btnTripleDes.UseVisualStyleBackColor = true;
+            this.btnTripleDes.Click += new System.EventHandler(this.btnTripleDes_Click);
+            this.btnTripleDes.MouseLeave += new System.EventHandler(this.btnTripleDes_MouseLeave);
+            this.btnTripleDes.MouseEnter += new System.EventHandler(this.btnTripleDes_MouseOver);
             // 
             // btnPinBlock
             // 
@@ -109,6 +115,9 @@
             this.btnPinBlock.TabIndex = 2;
             this.btnPinBlock.Text = "PINBlock";
             this.btnPinBlock.UseVisualStyleBackColor = true;
+            this.btnPinBlock.Click += new System.EventHandler(this.btnPinBlock_Click);
+            this.btnPinBlock.MouseLeave += new System.EventHandler(this.btnPinBlock_MouseLeave);
+            this.btnPinBlock.MouseEnter += new System.EventHandler(this.btnPinBlock_MouseOver);
             // 
             // btnPvv
             // 
