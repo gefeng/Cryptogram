@@ -39,6 +39,10 @@
             this.lbExpireDate = new System.Windows.Forms.Label();
             this.tbClearCvk = new System.Windows.Forms.TextBox();
             this.lbClearCvk = new System.Windows.Forms.Label();
+            this.lbClearCvkHint = new System.Windows.Forms.Label();
+            this.lbPanHint = new System.Windows.Forms.Label();
+            this.lbExpireDateHint = new System.Windows.Forms.Label();
+            this.lbServiceCodeHint = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbCvv
@@ -46,6 +50,7 @@
             this.tbCvv.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCvv.Location = new System.Drawing.Point(28, 359);
             this.tbCvv.Name = "tbCvv";
+            this.tbCvv.ReadOnly = true;
             this.tbCvv.Size = new System.Drawing.Size(99, 27);
             this.tbCvv.TabIndex = 21;
             // 
@@ -72,6 +77,7 @@
             this.btnGenerateCvv.TabIndex = 19;
             this.btnGenerateCvv.Text = "Generate";
             this.btnGenerateCvv.UseVisualStyleBackColor = false;
+            this.btnGenerateCvv.Click += new System.EventHandler(this.btnGenerateCvv_Click);
             // 
             // tbPan
             // 
@@ -80,6 +86,7 @@
             this.tbPan.Name = "tbPan";
             this.tbPan.Size = new System.Drawing.Size(300, 27);
             this.tbPan.TabIndex = 18;
+            this.tbPan.TextChanged += new System.EventHandler(this.tbPan_TextChanged);
             // 
             // lbPan
             // 
@@ -96,9 +103,11 @@
             // 
             this.tbServiceCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbServiceCode.Location = new System.Drawing.Point(28, 231);
+            this.tbServiceCode.MaxLength = 3;
             this.tbServiceCode.Name = "tbServiceCode";
             this.tbServiceCode.Size = new System.Drawing.Size(300, 27);
             this.tbServiceCode.TabIndex = 16;
+            this.tbServiceCode.TextChanged += new System.EventHandler(this.tbServiceCode_TextChanged);
             // 
             // lbServiceCode
             // 
@@ -115,9 +124,11 @@
             // 
             this.tbExpireDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbExpireDate.Location = new System.Drawing.Point(28, 167);
+            this.tbExpireDate.MaxLength = 4;
             this.tbExpireDate.Name = "tbExpireDate";
             this.tbExpireDate.Size = new System.Drawing.Size(300, 27);
             this.tbExpireDate.TabIndex = 14;
+            this.tbExpireDate.TextChanged += new System.EventHandler(this.tbExpireDate_TextChanged);
             // 
             // lbExpireDate
             // 
@@ -137,6 +148,7 @@
             this.tbClearCvk.Name = "tbClearCvk";
             this.tbClearCvk.Size = new System.Drawing.Size(300, 27);
             this.tbClearCvk.TabIndex = 12;
+            this.tbClearCvk.TextChanged += new System.EventHandler(this.tbClearCvk_TextChanged);
             // 
             // lbClearCvk
             // 
@@ -149,11 +161,51 @@
             this.lbClearCvk.TabIndex = 11;
             this.lbClearCvk.Text = "Clear CVK";
             // 
+            // lbClearCvkHint
+            // 
+            this.lbClearCvkHint.AutoSize = true;
+            this.lbClearCvkHint.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClearCvkHint.Location = new System.Drawing.Point(334, 42);
+            this.lbClearCvkHint.Name = "lbClearCvkHint";
+            this.lbClearCvkHint.Size = new System.Drawing.Size(0, 19);
+            this.lbClearCvkHint.TabIndex = 22;
+            // 
+            // lbPanHint
+            // 
+            this.lbPanHint.AutoSize = true;
+            this.lbPanHint.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPanHint.Location = new System.Drawing.Point(334, 106);
+            this.lbPanHint.Name = "lbPanHint";
+            this.lbPanHint.Size = new System.Drawing.Size(0, 19);
+            this.lbPanHint.TabIndex = 23;
+            // 
+            // lbExpireDateHint
+            // 
+            this.lbExpireDateHint.AutoSize = true;
+            this.lbExpireDateHint.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbExpireDateHint.Location = new System.Drawing.Point(334, 170);
+            this.lbExpireDateHint.Name = "lbExpireDateHint";
+            this.lbExpireDateHint.Size = new System.Drawing.Size(0, 19);
+            this.lbExpireDateHint.TabIndex = 24;
+            // 
+            // lbServiceCodeHint
+            // 
+            this.lbServiceCodeHint.AutoSize = true;
+            this.lbServiceCodeHint.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbServiceCodeHint.Location = new System.Drawing.Point(334, 234);
+            this.lbServiceCodeHint.Name = "lbServiceCodeHint";
+            this.lbServiceCodeHint.Size = new System.Drawing.Size(0, 19);
+            this.lbServiceCodeHint.TabIndex = 25;
+            // 
             // UcCvv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.lbServiceCodeHint);
+            this.Controls.Add(this.lbExpireDateHint);
+            this.Controls.Add(this.lbPanHint);
+            this.Controls.Add(this.lbClearCvkHint);
             this.Controls.Add(this.tbCvv);
             this.Controls.Add(this.lbCvv);
             this.Controls.Add(this.btnGenerateCvv);
@@ -185,5 +237,9 @@
         private System.Windows.Forms.Label lbExpireDate;
         private System.Windows.Forms.TextBox tbClearCvk;
         private System.Windows.Forms.Label lbClearCvk;
+        private System.Windows.Forms.Label lbClearCvkHint;
+        private System.Windows.Forms.Label lbPanHint;
+        private System.Windows.Forms.Label lbExpireDateHint;
+        private System.Windows.Forms.Label lbServiceCodeHint;
     }
 }

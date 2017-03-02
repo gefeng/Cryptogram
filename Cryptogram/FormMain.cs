@@ -20,8 +20,6 @@ namespace Cryptogram
 
         private InteractiveButton[] _tabList;
 
-        private IEncryptor encryptor = new Encryptor();
-
         public FormMain()
         {
             InitializeComponent();

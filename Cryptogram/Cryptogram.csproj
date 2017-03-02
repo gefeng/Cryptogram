@@ -59,6 +59,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="HintLabel.cs" />
     <Compile Include="IEncryptor.cs" />
     <Compile Include="InteractiveButton.cs" />
     <Compile Include="Program.cs" />

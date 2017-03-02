@@ -78,8 +78,8 @@
             this.btnXor.Text = "XOR";
             this.btnXor.UseVisualStyleBackColor = true;
             this.btnXor.Click += new System.EventHandler(this.btnXor_Click);
-            this.btnXor.MouseLeave += new System.EventHandler(this.btnXor_MouseLeave);
             this.btnXor.MouseEnter += new System.EventHandler(this.btnXor_MouseOver);
+            this.btnXor.MouseLeave += new System.EventHandler(this.btnXor_MouseLeave);
             // 
             // btnTripleDes
             // 
@@ -97,8 +97,8 @@
             this.btnTripleDes.Text = "TripleDES";
             this.btnTripleDes.UseVisualStyleBackColor = true;
             this.btnTripleDes.Click += new System.EventHandler(this.btnTripleDes_Click);
-            this.btnTripleDes.MouseLeave += new System.EventHandler(this.btnTripleDes_MouseLeave);
             this.btnTripleDes.MouseEnter += new System.EventHandler(this.btnTripleDes_MouseOver);
+            this.btnTripleDes.MouseLeave += new System.EventHandler(this.btnTripleDes_MouseLeave);
             // 
             // btnPinBlock
             // 
@@ -116,8 +116,8 @@
             this.btnPinBlock.Text = "PINBlock";
             this.btnPinBlock.UseVisualStyleBackColor = true;
             this.btnPinBlock.Click += new System.EventHandler(this.btnPinBlock_Click);
-            this.btnPinBlock.MouseLeave += new System.EventHandler(this.btnPinBlock_MouseLeave);
             this.btnPinBlock.MouseEnter += new System.EventHandler(this.btnPinBlock_MouseOver);
+            this.btnPinBlock.MouseLeave += new System.EventHandler(this.btnPinBlock_MouseLeave);
             // 
             // btnPvv
             // 
@@ -135,8 +135,8 @@
             this.btnPvv.Text = "PVV";
             this.btnPvv.UseVisualStyleBackColor = true;
             this.btnPvv.Click += new System.EventHandler(this.btnPvv_Click);
-            this.btnPvv.MouseLeave += new System.EventHandler(this.btnPvv_MouseLeave);
             this.btnPvv.MouseEnter += new System.EventHandler(this.btnPvv_MouseOver);
+            this.btnPvv.MouseLeave += new System.EventHandler(this.btnPvv_MouseLeave);
             // 
             // btnCvv
             // 
@@ -152,8 +152,8 @@
             this.btnCvv.Text = "CVV";
             this.btnCvv.UseVisualStyleBackColor = true;
             this.btnCvv.Click += new System.EventHandler(this.btnCvv_Click);
-            this.btnCvv.MouseLeave += new System.EventHandler(this.btnCvv_MouseLeave);
             this.btnCvv.MouseEnter += new System.EventHandler(this.btnCvv_MouseOver);
+            this.btnCvv.MouseLeave += new System.EventHandler(this.btnCvv_MouseLeave);
             // 
             // panelMain
             // 

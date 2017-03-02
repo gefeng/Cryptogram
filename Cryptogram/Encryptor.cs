@@ -10,6 +10,18 @@ namespace Cryptogram
 {
     public class Encryptor : IEncryptor
     {
+        private static IEncryptor _instance = new Encryptor();
+
+        private Encryptor()
+        {
+
+        }
+
+        public static IEncryptor Instance
+        {
+            get { return _instance; }
+        }
+        
         #region IEncryptor
 
         // Bitwise xor, right-align  e.g. 1010 xor 001 => 1010 xor 0001 => 1011

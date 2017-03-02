@@ -39,9 +39,20 @@ namespace Cryptogram
         public static bool IsDigit(char inputChar)
         {
             if (inputChar >= '0' && inputChar <= '9')
-            {
                 return true;
-            }
+
+            return false;
+        }
+
+        public static bool IsHexChar(char inputChar)
+        {
+            if (inputChar >= '0' && inputChar <= '9')
+                return true;
+
+            char upper = char.ToUpper(inputChar);
+
+            if (upper >= 'A' && upper <= 'F')
+                return true;
 
             return false;
         }
