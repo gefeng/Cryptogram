@@ -56,6 +56,7 @@ namespace Cryptogram
             }
 
             _validBlockA = true;
+            _hLabelBlockA.Clear();
 
             if (_validBlockA && _validBlockB)
             {
@@ -86,6 +87,7 @@ namespace Cryptogram
             }
 
             _validBlockB = true;
+            _hLabelBlockB.Clear();
 
             if (_validBlockA && _validBlockB)
             {
