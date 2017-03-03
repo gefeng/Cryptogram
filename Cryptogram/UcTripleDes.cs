@@ -109,7 +109,7 @@ namespace Cryptogram
             }
 
             _validKey = true;
-            _hLabelKey.Clear();
+            _hLabelKey.SetHint(Color.Black, "Check value: " + Encryptor.Instance.CalKCV(content));
         }
 
         private void btnEncrypt_Click(object sender, EventArgs e)
