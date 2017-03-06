@@ -107,96 +107,109 @@ namespace Cryptogram
 
         private void tbPin_TextChanged(object sender, EventArgs e)
         {
-            string content = tbPin.Text;
-
-            if (string.IsNullOrEmpty(content) || string.IsNullOrWhiteSpace(content))
+            if (!tbPin.ReadOnly)
             {
-                _hLabelPin.Clear();
-                _validPin = false;
+                string content = tbPin.Text;
 
-                tbPinBlockEncrypted.ReadOnly = false;
-                btnCalculatePin.Enabled = true;
+                if (string.IsNullOrEmpty(content) || string.IsNullOrWhiteSpace(content))
+                {
+                    _hLabelPin.Clear();
+                    _validPin = false;
 
-                return;
-            }
+                    tbPinBlockEncrypted.ReadOnly = false;
+                    btnCalculatePin.Enabled = true;
 
-            if (tbPin.ReadOnly == false)
-            {
+                    tbPinBlockEncrypted.Text = string.Empty;
+                    tbPinBlock.Text = string.Empty;
+
+                    return;
+                }
+
                 tbPinBlockEncrypted.ReadOnly = true;
                 btnCalculatePin.Enabled = false;
-            }
 
-            foreach (char c in content)
-            {
-                if (!Helper.IsDigit(c))
+                foreach (char c in content)
                 {
-                    _hLabelPin.SetHint(Color.Red, "PIN must only contain digits");
+                    if (!Helper.IsDigit(c))
+                    {
+                        _hLabelPin.SetHint(Color.Red, "PIN must only contain digits");
+                        _validPin = false;
+                        return;
+                    }
+                }
+
+                if (content.Length < 4 || content.Length > 6)
+                {
+                    _hLabelPin.SetHint(Color.Red, "Invalid PIN length");
                     _validPin = false;
                     return;
                 }
-            }
 
-            if (content.Length < 4 || content.Length > 6)
-            {
-                _hLabelPin.SetHint(Color.Red, "Invalid PIN length");
-                _validPin = false;
-                return;
+                _hLabelPin.Clear();
+                _validPin = true;
             }
-
-            _hLabelPin.Clear();
-            _validPin = true;
         }
 
         private void tbPinBlockEncrypted_TextChanged(object sender, EventArgs e)
         {
-            string content = tbPinBlockEncrypted.Text;
-
-            if (string.IsNullOrEmpty(content) || string.IsNullOrWhiteSpace(content))
+            if (!tbPinBlockEncrypted.ReadOnly)
             {
-                _hLabelPinBlockEncrypted.Clear();
-                _validPinBlockEncrypted = false;
+                string content = tbPinBlockEncrypted.Text;
 
-                tbPin.ReadOnly = false;
-                btnCalculatePinBlock.Enabled = true;
+                if (string.IsNullOrEmpty(content) || string.IsNullOrWhiteSpace(content))
+                {
+                    _hLabelPinBlockEncrypted.Clear();
+                    _validPinBlockEncrypted = false;
 
-                return;
-            }
+                    tbPin.ReadOnly = false;
+                    btnCalculatePinBlock.Enabled = true;
 
-            if (tbPinBlockEncrypted.ReadOnly == false)
-            {
+                    tbPinBlock.Text = string.Empty;
+                    tbPin.Text = string.Empty;
+
+                    return;
+                }
+
                 tbPin.ReadOnly = true;
                 btnCalculatePinBlock.Enabled = false;
-            }
 
-            foreach (char c in content)
-            {
-                if (!Helper.IsHexChar(c))
+                foreach (char c in content)
                 {
-                    _hLabelPinBlockEncrypted.SetHint(Color.Red, "Block must only contain hex digits");
+                    if (!Helper.IsHexChar(c))
+                    {
+                        _hLabelPinBlockEncrypted.SetHint(Color.Red, "Block must only contain hex digits");
+                        _validPinBlockEncrypted = false;
+                        return;
+                    }
+                }
+
+                if (content.Length != 16)
+                {
+                    _hLabelPinBlockEncrypted.SetHint(Color.Red, "Block size must be 8 bytes");
                     _validPinBlockEncrypted = false;
                     return;
                 }
-            }
 
-            if (content.Length != 16)
-            {
-                _hLabelPinBlockEncrypted.SetHint(Color.Red, "Block size must be 8 bytes");
-                _validPinBlockEncrypted = false;
-                return;
+                _hLabelPinBlockEncrypted.Clear();
+                _validPinBlockEncrypted = true;
             }
-
-            _hLabelPinBlockEncrypted.Clear();
-            _validPinBlockEncrypted = true;
         }
 
         private void btnCalculatePin_Click(object sender, EventArgs e)
         {
+            PinBlockFormat format;
+            string pin = string.Empty;
+
             tbPinBlock.Text = string.Empty;
             tbPin.Text = string.Empty;
 
             if (_validClearAwk && _validPan && _validPinBlockEncrypted)
             {
-                // Need to be implemented in encryptor
+                format = (cbPinFormat.SelectedItem as string) == "ISO-0" ? PinBlockFormat.ISO0 : PinBlockFormat.VISA3;
+
+                pin = Encryptor.Instance.CalPin(tbPan.Text, tbPinBlockEncrypted.Text, format);
+
+                tbPin.Text = pin;
             }
         }
 

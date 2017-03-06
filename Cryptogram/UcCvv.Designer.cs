@@ -51,7 +51,7 @@
             this.tbCvv.Location = new System.Drawing.Point(28, 359);
             this.tbCvv.Name = "tbCvv";
             this.tbCvv.ReadOnly = true;
-            this.tbCvv.Size = new System.Drawing.Size(99, 27);
+            this.tbCvv.Size = new System.Drawing.Size(140, 27);
             this.tbCvv.TabIndex = 21;
             // 
             // lbCvv
@@ -73,7 +73,7 @@
             this.btnGenerateCvv.ForeColor = System.Drawing.Color.Black;
             this.btnGenerateCvv.Location = new System.Drawing.Point(28, 287);
             this.btnGenerateCvv.Name = "btnGenerateCvv";
-            this.btnGenerateCvv.Size = new System.Drawing.Size(99, 35);
+            this.btnGenerateCvv.Size = new System.Drawing.Size(140, 35);
             this.btnGenerateCvv.TabIndex = 19;
             this.btnGenerateCvv.Text = "Generate";
             this.btnGenerateCvv.UseVisualStyleBackColor = false;
@@ -83,6 +83,7 @@
             // 
             this.tbPan.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPan.Location = new System.Drawing.Point(28, 103);
+            this.tbPan.MaxLength = 19;
             this.tbPan.Name = "tbPan";
             this.tbPan.Size = new System.Drawing.Size(300, 27);
             this.tbPan.TabIndex = 18;
@@ -145,6 +146,7 @@
             // 
             this.tbClearCvk.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClearCvk.Location = new System.Drawing.Point(28, 39);
+            this.tbClearCvk.MaxLength = 32;
             this.tbClearCvk.Name = "tbClearCvk";
             this.tbClearCvk.Size = new System.Drawing.Size(300, 27);
             this.tbClearCvk.TabIndex = 12;
@@ -155,7 +157,7 @@
             this.lbClearCvk.AutoSize = true;
             this.lbClearCvk.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbClearCvk.ForeColor = System.Drawing.Color.Black;
-            this.lbClearCvk.Location = new System.Drawing.Point(24, 17);
+            this.lbClearCvk.Location = new System.Drawing.Point(22, 17);
             this.lbClearCvk.Name = "lbClearCvk";
             this.lbClearCvk.Size = new System.Drawing.Size(73, 19);
             this.lbClearCvk.TabIndex = 11;

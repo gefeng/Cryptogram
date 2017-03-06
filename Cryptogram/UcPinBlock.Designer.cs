@@ -107,9 +107,9 @@
             // 
             this.btnCalculatePin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculatePin.ForeColor = System.Drawing.Color.Black;
-            this.btnCalculatePin.Location = new System.Drawing.Point(28, 357);
+            this.btnCalculatePin.Location = new System.Drawing.Point(188, 357);
             this.btnCalculatePin.Name = "btnCalculatePin";
-            this.btnCalculatePin.Size = new System.Drawing.Size(99, 35);
+            this.btnCalculatePin.Size = new System.Drawing.Size(140, 35);
             this.btnCalculatePin.TabIndex = 5;
             this.btnCalculatePin.Text = "PIN";
             this.btnCalculatePin.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.cbPinFormat.Name = "cbPinFormat";
             this.cbPinFormat.Size = new System.Drawing.Size(140, 27);
             this.cbPinFormat.TabIndex = 8;
-            this.cbPinFormat.SelectedIndex = 0;
+            this.cbPinFormat.SelectedIndex = 1;
             // 
             // tbPin
             // 
@@ -173,9 +173,9 @@
             // 
             this.btnCalculatePinBlock.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculatePinBlock.ForeColor = System.Drawing.Color.Black;
-            this.btnCalculatePinBlock.Location = new System.Drawing.Point(133, 357);
+            this.btnCalculatePinBlock.Location = new System.Drawing.Point(28, 357);
             this.btnCalculatePinBlock.Name = "btnCalculatePinBlock";
-            this.btnCalculatePinBlock.Size = new System.Drawing.Size(99, 35);
+            this.btnCalculatePinBlock.Size = new System.Drawing.Size(140, 35);
             this.btnCalculatePinBlock.TabIndex = 12;
             this.btnCalculatePinBlock.Text = "PIN Block";
             this.btnCalculatePinBlock.UseVisualStyleBackColor = true;
@@ -188,9 +188,8 @@
             this.lbClearAwkHint.ForeColor = System.Drawing.Color.Black;
             this.lbClearAwkHint.Location = new System.Drawing.Point(334, 42);
             this.lbClearAwkHint.Name = "lbClearAwkHint";
-            this.lbClearAwkHint.Size = new System.Drawing.Size(49, 19);
+            this.lbClearAwkHint.Size = new System.Drawing.Size(0, 19);
             this.lbClearAwkHint.TabIndex = 13;
-            this.lbClearAwkHint.Text = "label6";
             // 
             // lbPinHint
             // 
@@ -199,9 +198,8 @@
             this.lbPinHint.ForeColor = System.Drawing.Color.Black;
             this.lbPinHint.Location = new System.Drawing.Point(334, 178);
             this.lbPinHint.Name = "lbPinHint";
-            this.lbPinHint.Size = new System.Drawing.Size(49, 19);
+            this.lbPinHint.Size = new System.Drawing.Size(0, 19);
             this.lbPinHint.TabIndex = 14;
-            this.lbPinHint.Text = "label7";
             // 
             // lbPinBlockEncryptedHint
             // 
@@ -210,9 +208,8 @@
             this.lbPinBlockEncryptedHint.ForeColor = System.Drawing.Color.Black;
             this.lbPinBlockEncryptedHint.Location = new System.Drawing.Point(334, 314);
             this.lbPinBlockEncryptedHint.Name = "lbPinBlockEncryptedHint";
-            this.lbPinBlockEncryptedHint.Size = new System.Drawing.Size(49, 19);
+            this.lbPinBlockEncryptedHint.Size = new System.Drawing.Size(0, 19);
             this.lbPinBlockEncryptedHint.TabIndex = 16;
-            this.lbPinBlockEncryptedHint.Text = "label9";
             // 
             // lbPan
             // 
@@ -242,9 +239,8 @@
             this.lbPanHint.ForeColor = System.Drawing.Color.Black;
             this.lbPanHint.Location = new System.Drawing.Point(334, 110);
             this.lbPanHint.Name = "lbPanHint";
-            this.lbPanHint.Size = new System.Drawing.Size(49, 19);
+            this.lbPanHint.Size = new System.Drawing.Size(0, 19);
             this.lbPanHint.TabIndex = 19;
-            this.lbPanHint.Text = "label7";
             // 
             // UcPinBlock
             // 

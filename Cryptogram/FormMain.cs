@@ -20,6 +20,9 @@ namespace Cryptogram
 
         private InteractiveButton[] _tabList;
 
+        private Point _prevMouseLocation;
+        private bool _dragging = false;
+
         public FormMain()
         {
             InitializeComponent();
@@ -34,24 +37,6 @@ namespace Cryptogram
 
             ShowTab(_tabCvv, UcCvv.Instance);
         }
-
-        /*private void tbClearPVK_TextChanged(object sender, EventArgs e)
-        {
-            if(tbClearPVK.TextLength == 32)
-            {
-                tbKCV.Text = encryptor.CalKCV(tbClearPVK.Text);
-            }
-        }
-
-        private void btnCalculate_Click(object sender, EventArgs e)
-        {
-            string pan = tbPAN.Text;
-            string pin = tbPIN.Text;
-            string pvki = tbPVKI.Text;
-            string clearPVK = tbClearPVK.Text;
-            
-            tbPVV.Text = encryptor.CalPVV(pan, pin, pvki, clearPVK);
-        }*/
 
         private void ShowTab(InteractiveButton tab, UserControl tabContainer)
         {
@@ -146,6 +131,62 @@ namespace Cryptogram
             (_tabXor as TabButton).MouseLeaveHint();
         }
 
+        private void lbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                _prevMouseLocation = e.Location;
+                _dragging = true;
+            }
+        }
+
+        private void panelTitleBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void panelTitleBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(_dragging)
+            {
+                Point winLocation = this.Location;
+                Point currMouseLocation = e.Location;
+
+                winLocation.Offset(currMouseLocation.X - _prevMouseLocation.X, currMouseLocation.Y - _prevMouseLocation.Y);
+
+                this.Location = winLocation;
+            }
+        }
+
+        private void lbClose_MouseEnter(object sender, EventArgs e)
+        {
+            lbClose.ForeColor = Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+        }
+
+        private void lbClose_MouseLeave(object sender, EventArgs e)
+        {
+            lbClose.ForeColor = Color.Transparent;
+        }
+
+        private void lbMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            lbMinimize.ForeColor = Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+        }
+
+        private void lbMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            lbMinimize.ForeColor = Color.Transparent;
+        }
 
         //-------------------------------------------------------------------------------------------------------
         #endregion

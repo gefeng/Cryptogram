@@ -20,6 +20,11 @@ namespace Cryptogram
         string CalPinBlock(string pan, string pin, PinBlockFormat format);
 
         /// <summary>
+        /// Calculate pin from pin block
+        /// </summary>
+        string CalPin(string pan, string pinBlock, PinBlockFormat format);
+
+        /// <summary>
         /// Triple des encryption
         /// </summary>
         string Encrypt3DES(string data, string key);

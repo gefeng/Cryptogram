@@ -110,7 +110,7 @@
             this.btnEncrypt.ForeColor = System.Drawing.Color.Black;
             this.btnEncrypt.Location = new System.Drawing.Point(31, 220);
             this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(99, 35);
+            this.btnEncrypt.Size = new System.Drawing.Size(140, 35);
             this.btnEncrypt.TabIndex = 6;
             this.btnEncrypt.Text = "Encrypt";
             this.btnEncrypt.UseVisualStyleBackColor = true;
@@ -120,9 +120,9 @@
             // 
             this.btnDecrypt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecrypt.ForeColor = System.Drawing.Color.Black;
-            this.btnDecrypt.Location = new System.Drawing.Point(150, 220);
+            this.btnDecrypt.Location = new System.Drawing.Point(191, 220);
             this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(99, 35);
+            this.btnDecrypt.Size = new System.Drawing.Size(140, 35);
             this.btnDecrypt.TabIndex = 7;
             this.btnDecrypt.Text = "Decrypt";
             this.btnDecrypt.UseVisualStyleBackColor = true;

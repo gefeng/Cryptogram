@@ -68,6 +68,32 @@ namespace Cryptogram
             return pinBlock;
         }
 
+        public string CalPin(string pan, string pinBlock, PinBlockFormat format)
+        {
+            string pin = string.Empty;
+
+            if(string.IsNullOrEmpty(pinBlock))
+            {
+                return pin;
+            }
+
+            if(pinBlock.Length != 16)
+            {
+                return pin;
+            }
+
+            if (format == PinBlockFormat.ISO0)
+            {
+                pin = CalPinInFormatISO0(pan, pinBlock);
+            }
+            else if(format == PinBlockFormat.VISA3)
+            {
+                pin = CalPinInFormatVISA3(pinBlock);
+            }
+
+            return pin;
+        }
+
         // Currently only support ECB(Electronic Codebook) mode
         // Key size must be 8 bytes (64 bits) or 16 Bytes (128 bits)
         // Data string must only contain hex digits and the length should be an even number
@@ -292,6 +318,36 @@ namespace Cryptogram
             StringBuilder sb = new StringBuilder(pin);
 
             sb.Append('F', 16 - pin.Length);
+
+            return sb.ToString();
+        }
+
+        private string CalPinInFormatISO0(string pan, string pinBlock)
+        {
+            string panBlock = "0000";
+            string pin = string.Empty;
+
+            panBlock += pan.Substring(pan.Length - 13, 12);
+            pin = Xor(panBlock, pinBlock);
+
+            return pin.Substring(2, int.Parse(pin.Substring(1, 1)));
+        }
+
+        private string CalPinInFormatVISA3(string pinBlock)
+        {
+            //var pin = from c in pinBlock.ToCharArray()
+            //                        where c == 'f'
+            //                        select c;
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach(char c in pinBlock)
+            {
+                if (Helper.IsDigit(c))
+                {
+                    sb.Append(c);
+                }
+            }
 
             return sb.ToString();
         }
