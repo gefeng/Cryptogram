@@ -50,9 +50,9 @@
             this.panelTitleBar.Controls.Add(this.lbClose);
             this.panelTitleBar.Controls.Add(this.lbTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(1, 1);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(760, 50);
+            this.panelTitleBar.Size = new System.Drawing.Size(758, 50);
             this.panelTitleBar.TabIndex = 0;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             this.panelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseMove);
@@ -107,9 +107,9 @@
             this.panelSideBar.Controls.Add(this.btnPvv);
             this.panelSideBar.Controls.Add(this.btnCvv);
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSideBar.Location = new System.Drawing.Point(0, 50);
+            this.panelSideBar.Location = new System.Drawing.Point(1, 51);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(150, 430);
+            this.panelSideBar.Size = new System.Drawing.Size(150, 428);
             this.panelSideBar.TabIndex = 1;
             // 
             // btnXor
@@ -210,23 +210,25 @@
             this.panelMain.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.ForeColor = System.Drawing.Color.White;
-            this.panelMain.Location = new System.Drawing.Point(150, 50);
+            this.panelMain.Location = new System.Drawing.Point(151, 51);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(610, 430);
+            this.panelMain.Size = new System.Drawing.Size(608, 428);
             this.panelMain.TabIndex = 2;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(760, 480);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.panelTitleBar);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
+            this.Padding = new System.Windows.Forms.Padding(2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cryptogram";
             this.panelTitleBar.ResumeLayout(false);
