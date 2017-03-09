@@ -50,9 +50,9 @@
             this.panelTitleBar.Controls.Add(this.lbClose);
             this.panelTitleBar.Controls.Add(this.lbTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(1, 1);
+            this.panelTitleBar.Location = new System.Drawing.Point(2, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(758, 50);
+            this.panelTitleBar.Size = new System.Drawing.Size(756, 50);
             this.panelTitleBar.TabIndex = 0;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             this.panelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseMove);
@@ -107,9 +107,10 @@
             this.panelSideBar.Controls.Add(this.btnPvv);
             this.panelSideBar.Controls.Add(this.btnCvv);
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSideBar.Location = new System.Drawing.Point(1, 51);
+            this.panelSideBar.Location = new System.Drawing.Point(2, 52);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(150, 428);
+            this.panelSideBar.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.panelSideBar.Size = new System.Drawing.Size(150, 426);
             this.panelSideBar.TabIndex = 1;
             // 
             // btnXor
@@ -123,7 +124,7 @@
             this.btnXor.ForeColor = System.Drawing.Color.White;
             this.btnXor.Location = new System.Drawing.Point(0, 200);
             this.btnXor.Name = "btnXor";
-            this.btnXor.Size = new System.Drawing.Size(150, 50);
+            this.btnXor.Size = new System.Drawing.Size(148, 50);
             this.btnXor.TabIndex = 4;
             this.btnXor.Text = "XOR";
             this.btnXor.UseVisualStyleBackColor = true;
@@ -142,7 +143,7 @@
             this.btnTripleDes.ForeColor = System.Drawing.Color.White;
             this.btnTripleDes.Location = new System.Drawing.Point(0, 150);
             this.btnTripleDes.Name = "btnTripleDes";
-            this.btnTripleDes.Size = new System.Drawing.Size(150, 50);
+            this.btnTripleDes.Size = new System.Drawing.Size(148, 50);
             this.btnTripleDes.TabIndex = 3;
             this.btnTripleDes.Text = "TripleDES";
             this.btnTripleDes.UseVisualStyleBackColor = true;
@@ -161,7 +162,7 @@
             this.btnPinBlock.ForeColor = System.Drawing.Color.White;
             this.btnPinBlock.Location = new System.Drawing.Point(0, 100);
             this.btnPinBlock.Name = "btnPinBlock";
-            this.btnPinBlock.Size = new System.Drawing.Size(150, 50);
+            this.btnPinBlock.Size = new System.Drawing.Size(148, 50);
             this.btnPinBlock.TabIndex = 2;
             this.btnPinBlock.Text = "PINBlock";
             this.btnPinBlock.UseVisualStyleBackColor = true;
@@ -180,7 +181,7 @@
             this.btnPvv.ForeColor = System.Drawing.Color.White;
             this.btnPvv.Location = new System.Drawing.Point(0, 50);
             this.btnPvv.Name = "btnPvv";
-            this.btnPvv.Size = new System.Drawing.Size(150, 50);
+            this.btnPvv.Size = new System.Drawing.Size(148, 50);
             this.btnPvv.TabIndex = 1;
             this.btnPvv.Text = "PVV";
             this.btnPvv.UseVisualStyleBackColor = true;
@@ -197,7 +198,7 @@
             this.btnCvv.ForeColor = System.Drawing.Color.White;
             this.btnCvv.Location = new System.Drawing.Point(0, 0);
             this.btnCvv.Name = "btnCvv";
-            this.btnCvv.Size = new System.Drawing.Size(150, 50);
+            this.btnCvv.Size = new System.Drawing.Size(148, 50);
             this.btnCvv.TabIndex = 0;
             this.btnCvv.Text = "CVV";
             this.btnCvv.UseVisualStyleBackColor = true;
@@ -210,9 +211,9 @@
             this.panelMain.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.ForeColor = System.Drawing.Color.White;
-            this.panelMain.Location = new System.Drawing.Point(151, 51);
+            this.panelMain.Location = new System.Drawing.Point(152, 52);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(608, 428);
+            this.panelMain.Size = new System.Drawing.Size(606, 426);
             this.panelMain.TabIndex = 2;
             // 
             // FormMain

@@ -1,0 +1,14 @@
+E:\MyProject\Cryptogram\Cryptogram\bin\Release\Cryptogram.exe.config
+E:\MyProject\Cryptogram\Cryptogram\bin\Release\Cryptogram.exe
+E:\MyProject\Cryptogram\Cryptogram\bin\Release\Cryptogram.pdb
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.csprojResolveAssemblyReference.cache
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.FormMain.resources
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.Properties.Resources.resources
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.UcCvv.resources
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.UcPinBlock.resources
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.UcPvv.resources
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.UcTripleDes.resources
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.UcXor.resources
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.csproj.GenerateResource.Cache
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.exe
+E:\MyProject\Cryptogram\Cryptogram\obj\Release\Cryptogram.pdb

@@ -207,7 +207,7 @@ namespace Cryptogram
             {
                 format = (cbPinFormat.SelectedItem as string) == "ISO-0" ? PinBlockFormat.ISO0 : PinBlockFormat.VISA3;
 
-                pin = Encryptor.Instance.CalPin(tbPan.Text, tbPinBlockEncrypted.Text, format);
+                pin = Encryptor.Instance.CalPin(tbPan.Text, Encryptor.Instance.Decrypt3DES(tbPinBlockEncrypted.Text, tbClearAwk.Text), format);
 
                 tbPin.Text = pin;
             }
